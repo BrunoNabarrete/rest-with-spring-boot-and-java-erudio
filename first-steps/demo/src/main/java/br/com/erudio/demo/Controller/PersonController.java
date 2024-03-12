@@ -23,4 +23,10 @@ public class PersonController {
         return services.findById(id);
     }
 
+    @RequestMapping(method=RequestMethod.GET,
+    produces = MediaType.APPLICATION_JSON_VALUE)
+    public java.util.List<Person> findAll() throws Exception {
+        return services.findAll();
+    }
+
 }
